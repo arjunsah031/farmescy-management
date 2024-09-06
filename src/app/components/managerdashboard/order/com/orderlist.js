@@ -27,6 +27,20 @@ export default function OrderList() {
         fetchOrders();
     }, []);
 
+    const handleDelete = async (orderId) => {
+        try {
+            const res = await fetch(`/api/order/${orderId}`, {
+                method: 'DELETE',
+            });
+            if (!res.ok) {
+                throw new Error('Failed to delete order');
+            }
+            setOrders((prevOrders) => prevOrders.filter(order => order.id !== orderId));
+        } catch (err) {
+            setError(err.message);
+        }
+    };
+
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>;
 
@@ -71,6 +85,13 @@ export default function OrderList() {
                                     </li>
                                 ))}
                             </ul>
+
+                            <button
+                                className={styles.deleteButton}
+                                onClick={() => handleDelete(order.id)}
+                            >
+                                Delete Order
+                            </button>
                         </li>
                     ))}
                 </ul>

@@ -8,9 +8,9 @@ export default function AddMedicine() {
   const [formData, setFormData] = useState({
     name: '',
     manufacturer: '',
-    price: 0,
-    stock: 0,
-    discount: 0,
+    price: '',
+    stock: '',
+    discount: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const router = useRouter();

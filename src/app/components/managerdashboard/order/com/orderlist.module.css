@@ -41,3 +41,17 @@
 .inventoryItem p {
     margin: 0.5rem 0;
 }
+.deleteButton {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.deleteButton:hover {
+    background-color: #c0392b;
+}
