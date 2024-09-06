@@ -9,7 +9,10 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const router = useRouter();
 
-  const token = localStorage.getItem('token');
+  if (typeof window !== 'undefined') {
+    // Client-side only code
+    const token = localStorage.getItem('token');
+  }
 
   const handleSubmit = async (event) => {
     event.preventDefault();
