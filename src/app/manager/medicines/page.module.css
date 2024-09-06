@@ -1,0 +1,73 @@
+/* src/pages/medicines/medicines.module.css */
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: black;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .button {
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #005bb5;
+  }
+  
+  .medicineList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .medicineList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+  }
+  
+  .medicineInfo {
+    flex-grow: 1;
+  }
+  
+  .medicineActions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .medicineActions button {
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .medicineActions button:hover {
+    background-color: #005bb5;
+  }
+  

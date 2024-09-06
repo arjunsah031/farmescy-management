@@ -1,0 +1,55 @@
+/* src/pages/medicines/addMedicine.module.css */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+ .container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+ .container form input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .container form input[type="number"] {
+    -moz-appearance: textfield; /* Remove number input arrows in Firefox */
+  }
+  
+  .container form input[type="number"]::-webkit-inner-spin-button,
+  .container form input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .container form button {
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .container form button:hover {
+    background-color: #005bb5;
+  }
+  
+  .container form button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  

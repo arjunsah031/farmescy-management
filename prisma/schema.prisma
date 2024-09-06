@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+   
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Medicine {
+  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  name           String
+  manufacturer   String
+  price          Float
+  stock          Int
+  discount       Float
+  inventories Inventory[]
+}
+
+model SalesExecutive {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  firstName    String
+  lastName     String
+  dateOfBirth  DateTime
+  gender       String
+  experience   Int
+  username     String   @unique
+  password     String
+}
+
+model Order {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  orderId         String
+  customerName    String
+  customerContact String
+  products        Json
+  totalAmount     Float
+  createdBy       String   // This will store Sales Executive ID
+  createdAt       DateTime @default(now()) // Make sure this field exists
+  updatedAt       DateTime @updatedAt
+  inventories     Inventory[]
+}
+
+
+model Inventory {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  sku         String   @unique
+  orderId     String?  @db.ObjectId
+  medicineId  String?  @db.ObjectId
+  updatedAt   DateTime @updatedAt
+  createdAt   DateTime @default(now())
+
+  order       Order?    @relation(fields: [orderId], references: [id], onDelete: SetNull)
+  medicine    Medicine? @relation(fields: [medicineId], references: [id], onDelete: Cascade)
+}

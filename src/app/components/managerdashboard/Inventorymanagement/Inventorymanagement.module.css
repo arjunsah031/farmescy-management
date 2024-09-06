@@ -1,0 +1,82 @@
+/* page.module.css */
+
+.inventoryContainer {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .inventoryContainer h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .inventoryForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    
+  }
+  
+  .inventoryForm input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .inventoryForm button {
+    padding: 10px 20px;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .inventoryForm button:hover {
+    background-color: #005bb5;
+  }
+  
+  .medicineList {
+    list-style: none;
+    padding: 0;
+    color: black;
+  }
+  
+  .medicineList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .medicineList li:last-child {
+    border-bottom: none;
+  }
+  
+  .medicineList button {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .medicineList button:hover {
+    background-color: #d9363e;
+  }
+  

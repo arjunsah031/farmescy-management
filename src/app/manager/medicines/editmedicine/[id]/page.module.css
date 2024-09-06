@@ -1,0 +1,55 @@
+/* EditMedicine.module.css */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+ .container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+  }
+  
+ .container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container form input {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .container form input[type='number'] {
+    -moz-appearance: textfield; /* Remove spinner in Firefox */
+  }
+  
+  .container form  input[type='number']::-webkit-outer-spin-button,
+  .container form  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* Remove spinner in Chrome */
+  }
+  
+  .container form  button {
+    padding: 0.75rem;
+    background-color: #0070f3;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .container form  button:hover {
+    background-color: #005bb5;
+  }
+  
